@@ -50,6 +50,14 @@ your task:
 #include <vector>
 #include <algorithm>
 #include <cassert>
+#include "Car.h"
+#include "Highway.h"
+#include "HighwayPatrol.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
+#include "Vehicle.h"
+
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH

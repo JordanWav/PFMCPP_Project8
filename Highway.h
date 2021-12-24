@@ -3,6 +3,8 @@
 #include <vector>
 #include <algorithm>
 #include "Vehicle.h"
+#include "Car.h"
+#include "Motorcycle.h"
 
 struct HighwayPatrol;
 

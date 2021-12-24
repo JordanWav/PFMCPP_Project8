@@ -8,6 +8,7 @@ struct HighwayPatrol : Vehicle
     HighwayPatrol();
     ~HighwayPatrol();
     void scanHighway(Highway* h);
+    std::string vehicleType;
 
     void pullOver( Vehicle* v, bool willArrest, Highway* h );
 };

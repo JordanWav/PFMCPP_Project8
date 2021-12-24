@@ -8,17 +8,16 @@ SemiTruck::SemiTruck(const SemiTruck&) = default;
 
 SemiTruck& SemiTruck::operator=(const SemiTruck&) = default;
 
-void SemiTruck::toSpeedLimit(int s)
+void SemiTruck::checkSpeed(int s)
 {
+    std::cout << name << ": Current speed is " << s << " mph" << std::endl;
     if( s > 65 )
     {
         std::cout<< name << ": I should slow down!" << std::endl;
-        Vehicle::setSpeed(65);
     }
-    if( s < 65 )
+    else if( s < 65 )
     {
         std::cout<< name << ": I'm going too slow!" << std::endl;
-        Vehicle::setSpeed(65);
     }
 }
 

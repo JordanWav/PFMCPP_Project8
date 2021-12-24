@@ -3,7 +3,7 @@
 #include <iostream>
 #include "Vehicle.h"
 
-struct SemiTruck : public Vehicle
+struct SemiTruck : Vehicle
 {
     SemiTruck(const std::string& s);
 
@@ -11,6 +11,6 @@ struct SemiTruck : public Vehicle
     SemiTruck(const SemiTruck&);
     SemiTruck& operator=(const SemiTruck&);
     
-    void toSpeedLimit(int s);
+    void checkSpeed(int s);
     void pullOver();
 };

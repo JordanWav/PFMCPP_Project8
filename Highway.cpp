@@ -25,9 +25,6 @@ void Highway::addVehicleInternal(Vehicle* v)
         motorcycle->lanesplitAndRace();
     }
 
-    
-
-
     /*
     depending on the derived type, call the member function that doesn't evade the cops. 
     */
@@ -35,13 +32,23 @@ void Highway::addVehicleInternal(Vehicle* v)
 
 void Highway::removeVehicleInternal(Vehicle* v)
 {
-    assert(false);
+    // assert(false);
 
     /*
     depending on the derived type, call the member function that tries to evade the cops. 
 
     trucks pull over, but cars and bikes try to evade!!
     */
+
+    if (Car* car = dynamic_cast<Car*>(v))
+    {
+        car->tryToEvade();
+    }
+
+    if (Motorcycle* motorcycle = dynamic_cast<Motorcycle*>(v))
+    {
+        motorcycle->tryToEvade();
+    }
 }
 
 void Highway::addVehicle(Vehicle* v)

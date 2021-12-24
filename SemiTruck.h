@@ -10,5 +10,3 @@ struct SemiTruck : public Vehicle
     void toSpeedLimit(int s);
     void pullOver();
 };
-
-
